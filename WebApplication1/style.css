@@ -1,0 +1,667 @@
+body {
+    background-color: #f2f2f2;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.transparent-box {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.2;
+    z-index: 11;
+}
+
+.logo_fixed {
+    display: none;
+}
+
+    .logo_fixed img {
+        position: fixed;
+        width: 100px;
+        height: 34px;
+        z-index: 2;
+    }
+
+/*for the top bar*/
+.topbar {
+    height: 65px;
+    background-color: black;
+    padding: 0 90px 0 90px;
+}
+
+.logo {
+    float: left;
+    background-image: url("images/logo.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 185px;
+    height: 65px;
+}
+
+.search {
+    float: left;
+    position: relative;
+    margin-top: 18px;
+    margin-left: 70px;
+}
+
+.search_fixed {
+    position: fixed;
+    top: 0;
+    right: 90px;
+    z-index: 4;
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.search_top input {
+    padding: 8px 20px;
+    border: 1px solid red;
+    border-radius: 4px;
+    outline: none;
+}
+
+.search_fixed input {
+    width: 200px;
+    padding: 6px 15px;
+    border: 3px solid red;
+    border-radius: 6px;
+    outline: none;
+}
+
+.search_top input:focus {
+    padding: 6px 18px;
+    border: 3px solid red;
+    border-radius: 6px;
+}
+
+.fa-search {
+    color: grey;
+    position: absolute;
+    right: 0;
+    top: 8px;
+    margin-right: 8px;
+}
+
+.lognav {
+    float: left;
+    position: relative;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+    .lognav .log_textbox {
+        border-color: transparent;
+        background-color: transparent;
+        border-bottom: 1px solid #ED1C24;
+        padding-bottom: 5px;
+        text-indent: 25px;
+        margin-left: 10px;
+        color: white;
+        outline: none;
+        width: 140px;
+    }
+
+    .lognav button {
+        background-color: #ED1C24;
+        color: white;
+        height: 30px;
+        border: none;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+
+.fa-user {
+    top: 5px;
+    left: 15px;
+    color: #ED1C24;
+    position: absolute;
+}
+
+.fa-lock {
+    top: 6px;
+    left: 172px;
+    color: #ED1C24;
+    position: absolute;
+}
+
+.register {
+    position: absolute;
+    top: 0;
+    left: 387px;
+    z-index: 12;
+}
+
+    .register form div{
+        margin-top:10px;
+    }
+
+    .register .popup {
+        position: absolute;
+        height: 0;
+        width: 430px;
+        background-color: white;
+        top: 34px;
+        right: 0;
+        z-index: 3;
+        overflow: hidden;
+        border-left: 2px solid #ED1C24;
+        border-right: 2px solid #ED1C24;
+        border-bottom: 2px solid #ED1C24;
+        border-radius: 0 0 15px 15px;
+        padding: 0 0 0 20px;
+        margin-top: 6px;
+    }
+
+    /* Toggle this class - hide and show the popup */
+    .register .show {
+        height: 500px;
+        -webkit-animation: slideDown 0.5s;
+        -moz-animation: slideDown 0.5s;
+        animation: slideDown 0.5s;
+    }
+
+    .register .hide {
+        height: 0;
+        -webkit-animation: slideUp 0.5s;
+        -moz-animation: slideUp 0.5s;
+        animation: slideUp 0.5s;
+    }
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes slideDown {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 500px;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 500px;
+    }
+}
+
+@-webkit-keyframes slideUp {
+    from {
+        height: 500px;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        height: 500px;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+
+.short_textbox, .long_textbox {
+    border: 2px solid #ED1C24;
+    margin: 5px 0 10px 0;
+    border-radius: 10px;
+    padding: 5px;
+    text-indent: 15px;
+}
+
+.radioButton {
+    margin: 10px 20px 10px 0;
+}
+
+.submitButton {
+    position: absolute;
+    left: 185px;
+    background-color: #ED1C24;
+    color: white;
+    height: 40px;
+    width: 60px;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+    .submitButton:hover {
+        font-size: 16px;
+    }
+
+.short_textbox {
+    width: 180px;
+}
+
+.long_textbox {
+    width: 400px;
+}
+
+/*for the topnav*/
+.topnav {
+    overflow: hidden;
+    background-color: #ED1C24;
+    padding: 0 90px 0 100px;
+}
+
+.topnav_fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+    .topnav a:hover {
+        color: white;
+        font-weight: bold;
+    }
+
+.topnav .active {
+    color: white;
+}
+
+#products_menu {
+    visibility: hidden;
+}
+
+
+/*for midban */
+.midban {
+    position: relative;
+    margin: 30px 90px 0 90px;
+    height: 300px;
+    overflow: hidden;
+    padding: 0 10px 0 10px;
+}
+
+.products {
+    float: left;
+    padding: 0;
+}
+
+    .products ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .products li {
+        list-style: none;
+        width: 200px;
+        height: 20px;
+        background-color: white;
+        font-size: 10pt;
+        padding: 8px 20px 0 20px;
+        border: 1px solid #f2f2f2;
+        border-left: 1px solid silver;
+        border-right: 1px solid silver;
+        cursor: pointer;
+    }
+
+        .products li:hover {
+            background-color: #f2f2f2;
+        }
+
+        .products li:first-child {
+            border-top: 1px solid silver;
+        }
+
+        .products li:last-child {
+            border-bottom: 1px solid silver;
+        }
+
+.carousel {
+    float: left;
+    width: 878px;
+    height: 296px;
+    margin-left: 25px;
+    background-color: white;
+    border: 2px solid #ED1C24;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 296px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+        background-color: black;
+        opacity: 0.8;
+    }
+
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+    .active, .dot:hover {
+        background-color: #717171;
+    }
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-name: fade;
+    -moz-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/*for item ban */
+.itemban {
+    position: relative;
+    overflow: hidden;
+    padding: 50px 100px 0 100px;
+}
+
+    .itemban h3 {
+        color: gray;
+    }
+
+
+.collections {
+    float: left;
+    margin-top: 30px;
+}
+
+.onsale, .oncollections {
+    position: relative;
+    float: left;
+    width: 170px;
+    height: 250px;
+    background-color: white;
+    padding: 2px 7px 10px 6px;
+    margin-top: 15px;
+    margin-right: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+
+    .onsale img, .oncollections img {
+        display: block;
+        margin: auto;
+        width: auto;
+        height: 170px;
+        margin-bottom: 10px;
+    }
+
+    .onsale:hover, .oncollections:hover {
+        width: 168px;
+        height: 248px;
+        border: 1px solid #ED1C24;
+    }
+
+    .onsale button, .oncollections button {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        color: #ED1C24;
+        width: 100px;
+        height: 25px;
+        outline: none;
+        border: 2px solid #ED1C24;
+        border-radius: 5px;
+        background: transparent;
+        cursor: pointer;
+    }
+
+        .onsale button:hover, .oncollections button:hover {
+            font-weight: bold;
+        }
+
+.footerban {
+    position: relative;
+    margin-top: 50px;
+    height: 200px;
+    color: white;
+    font-size: 9pt;
+    overflow: hidden;
+    background-color: black;
+    padding: 20px 100px 20px 100px;
+}
+
+.about_us {
+    float: left;
+    width: 300px;
+    text-align: justify
+}
+
+.links {
+    float: left;
+    width: 100px;
+    margin-left: 50px;
+}
+
+    .links ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .links li {
+        list-style: none;
+        margin-top: 10px;
+    }
+
+        .links li a {
+            text-decoration: none;
+            color: white;
+        }
+
+            .links li a:hover {
+                text-decoration: underline;
+            }
+
+.contact_us {
+    float: left;
+    width: 280px;
+    margin-left: 50px;
+}
+
+    .contact_us span {
+        float: left;
+        width: 300px;
+        overflow: hidden;
+        margin-top: 8px;
+    }
+
+.feedback {
+    float: left;
+    width: 319px;
+    margin-left: 50px;
+}
+
+    .feedback textarea {
+        width: 319px;
+        margin-top: 10px;
+        height: 80px;
+    }
+
+    .feedback button {
+        float: left;
+        background-color: #ED1C24;
+        color: white;
+        height: 30px;
+        border: none;
+        outline: none;
+        margin: 10px 0 0 255px;
+        cursor: pointer;
+    }
+
+.redbox {
+    height: 40px;
+    overflow: hidden;
+    background-color: #ED1C24;
+}
+
+.users_nav {
+    float: left;
+    position: relative;
+    width: 348px;
+    height: 30px;
+    margin:0;
+    margin-top: 20px;
+    margin-left: 120px;
+    color: white;
+    padding: 0;
+}
+
+
+.users_nav .welcome{
+    position:relative;
+    float:right;
+    padding:0;
+    margin:0;
+    width:160px;
+    height: 23px;
+    overflow:hidden;
+    font-size: 16pt;
+    font-weight:bold;
+    text-transform: capitalize;
+}
+
+.users_nav i{
+    padding:0;
+    margin:0;
+    float:right;
+    font-size:20pt;
+    cursor:pointer;
+    margin-right:15px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.users_nav i:hover {
+    transform: rotate(180deg);
+}
+#logOut{
+    float:right;
+    background-color: #ED1C24;
+    color: white;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+}
+.cart{
+    position:fixed;
+    bottom: 10px;
+    right:0;
+    cursor: pointer;
+    padding:0;
+}
+
+.cart img{
+    width:80px;
+    height:80px;
+}
+
+#items_count{
+    position: absolute;
+    color: red;
+    font-weight:bold;
+    right:24px;
+    top:9px;
+}
+
+.onsale .AddCart, .oncollections .AddCart {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #ED1C24;
+    width: 100px;
+    height: 25px;
+    outline: none;
+    border: 2px solid #ED1C24;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+}
+.onsale .productId, .oncollections .productId {
+  visibility:hidden;
+}
